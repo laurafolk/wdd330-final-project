@@ -1,0 +1,46 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header, footer {
+    background-color: #48a999;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffe28a;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  /* Mobile-first responsive layout */
+  @media (min-width: 768px) {
+    main {
+      max-width: 960px;
+      margin: auto;
+    }
+  }
+  
+  
