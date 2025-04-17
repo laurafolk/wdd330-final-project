@@ -2,23 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Complete Recipe Meal Prep Planner</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="src/main.js"></script>
 </head>
 <body>
   <header>
-    <h1>🍽️ Recipe Meal Prep Planner</h1>
+    <h1>Meal Prep Planner</h1>
     <nav>
-      <a href="#/">Home</a>
-      <a href="#/search">Search</a>
-      <a href="#/login">Login</a>
+      <button id="home-btn">Home</button>
+      <button id="search-btn">Search</button>
+      <button id="favorites-btn">Favorites</button>
+      <!-- <button id="signup-btn">Sign Up</button>
+      <button id="login-btn">Login</button> -->
     </nav>
   </header>
-  <main id="app"></main>
+
+  <main>
+    <section id="auth">
+      <h2>Login</h2>
+      <input id="login-username" type="text" placeholder="Username" />
+      <input id="login-password" type="password" placeholder="Password" />
+      <button id="login-btn">Log In</button>
+    </section>
+
+    <section id="signup" style="display: none;">
+      <h2>Sign Up</h2>
+      <input id="signup-username" type="text" placeholder="Username" />
+      <input id="signup-password" type="password" placeholder="Password" />
+      <button id="signup-btn">Sign Up</button>
+    </section>
+
+    <section id="search" style="display: none;">
+      <h2>Search Recipes</h2>
+      <input id="search-bar" type="text" placeholder="Search for recipes..." />
+      <button id="search-btn">Search</button>
+      <div id="search-results"></div>
+    </section>
+
+    <section id="saved-recipes-section" style="display: none;">
+      <h2>Your Saved Recipes</h2>
+      <div id="saved-recipes"></div>
+    </section>
+
+    <section id="profile" style="display: none;">
+      <h2>Your Profile</h2>
+      <p id="profile-username"></p>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 The Meal Prep Planner</p>
+    <p>&copy; 2025 The Complete Recipe Meal Prep Planner</p>
   </footer>
-  <script type="module" src="/src/main.js"></script>
+
 </body>
 </html>

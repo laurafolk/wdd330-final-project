@@ -1,0 +1,47 @@
+{
+    "results": [
+      {
+        "id": 101,
+        "name": "Creamy Garlic Chicken",
+        "thumbnail_url": "https://example.com/images/garlic-chicken.jpg",
+        "description": "A rich and creamy garlic chicken dish that's easy to make and perfect for dinner.",
+        "type": "Dinner",
+        "instructions": "1. Season the chicken with salt and pepper. 2. Sauté the garlic in butter. 3. Add cream and simmer until thick. 4. Cook the chicken in the sauce until golden brown.",
+        "nutrition": {
+          "calories": "500 kcal",
+          "protein": "40g",
+          "fat": "30g",
+          "carbs": "20g"
+        }
+      },
+      {
+        "id": 102,
+        "name": "Peanut Butter Brownies",
+        "thumbnail_url": "https://example.com/images/brownies.jpg",
+        "description": "Fudgy brownies with a swirl of creamy peanut butter.",
+        "type": "Dessert",
+        "instructions": "1. Preheat oven and grease a baking pan. 2. Mix the brownie batter. 3. Swirl peanut butter into the batter. 4. Bake for 25 minutes and let cool.",
+        "nutrition": {
+          "calories": "300 kcal",
+          "protein": "6g",
+          "fat": "18g",
+          "carbs": "30g"
+        }
+      },
+      {
+        "id": 103,
+        "name": "Fruit Yogurt Parfait",
+        "thumbnail_url": "https://example.com/images/parfait.jpg",
+        "description": "Layered yogurt with granola and fresh berries for a refreshing snack.",
+        "type": "Snack",
+        "instructions": "1. Layer yogurt, granola, and berries in a glass. 2. Repeat layers as desired. 3. Serve chilled.",
+        "nutrition": {
+          "calories": "150 kcal",
+          "protein": "8g",
+          "fat": "5g",
+          "carbs": "25g"
+        }
+      }
+    ]
+  }
+  

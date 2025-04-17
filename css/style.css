@@ -1,46 +1,101 @@
-/* style.css */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Mobile-first styling */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #4caf50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.05);
+}
+
+main#app {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Simple card layout for recipes */
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Larger screens (laptops and desktops) */
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+    padding: 1rem 2rem;
   }
-  
-  body {
-    font-family: system-ui, sans-serif;
-    background: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
+
+  nav {
+    justify-content: flex-end;
+    margin-top: 0;
   }
-  
-  header, footer {
-    background-color: #48a999;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #ffe28a;
-  }
-  
-  main {
+
+  main#app {
     padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
   }
-  
-  /* Mobile-first responsive layout */
-  @media (min-width: 768px) {
-    main {
-      max-width: 960px;
-      margin: auto;
-    }
+
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-  
-  
+}
