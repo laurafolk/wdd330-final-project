@@ -1,25 +1,26 @@
 import { getFromLocalStorage, saveToLocalStorage } from './utils.js';
 
-async function fetchRecipes() {
-  const url = 'https://tasty-api1.p.rapidapi.com/featured-section';
-  const options = {
-    method: 'GET',
-    headers: {
-      'x-rapidapi-key': '88aac24a55msh80b25efa593281ep1b29d7jsnfd44213ed1b4',
-      'x-rapidapi-host': 'tasty-api1.p.rapidapi.com'
-    }
-  };
+async function fetchRecipes(searchTerm) {
+  // const url = "https://tasty.p.rapidapi.com/recipes/list";
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-key": "88aac24a55msh80b25efa593281ep1b29d7jsnfd44213ed1b4",
+  //     "x-rapidapi-host": "tasty.p.rapidapi.com",
+  //   },
+  // };
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`;
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url); //, options);
     const data = await response.json();
 
     // Transform the data into a usable format
-    return data.results.map(recipe => ({
-      id: recipe.id,
-      title: recipe.name,
-      description: `Calories: ${recipe.nutrition?.calories || 'N/A'}`,
-      image: recipe.thumbnail_url
+    return data.meals.map((recipe) => ({
+      id: recipe.idMeal,
+      title: recipe.strMeal,
+      description: recipe.strInstructions, // `Calories: ${recipe.nutrition?.calories || "N/A"}`,
+      image: recipe.strMealThumb,
     }));
   } catch (error) {
     console.error("API fetch error:", error);
@@ -43,10 +44,10 @@ export async function renderSearch() {
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "<p>Searching...</p>";
 
-    const allRecipes = await fetchRecipes();
-    const data = query
-      ? allRecipes.filter(recipe => recipe.title.toLowerCase().includes(query))
-      : allRecipes;
+    const data = await fetchRecipes(query);
+    // const data = query
+    //   ? allRecipes.filter(recipe => recipe.title.toLowerCase().includes(query))
+    //   : allRecipes;
 
     const favorites = getFromLocalStorage("favorites") || [];
 

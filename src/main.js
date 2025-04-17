@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  window.addEventListener('popstate', () => router(routes));
+  window.addEventListener('popstate', () => initRouter(routes));
 });
