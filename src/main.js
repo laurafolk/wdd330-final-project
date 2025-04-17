@@ -1,4 +1,4 @@
-import { router } from './router.mjs';
+import { initRouter } from './router.mjs';
 import { renderHome } from './home.mjs';
 import { renderSearch } from './search.mjs';
 import { renderLogin } from './auth.mjs';
@@ -12,13 +12,13 @@ const routes = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  router(routes);
+  initRouter(routes);
 
   document.querySelectorAll('nav button').forEach(btn => {
     btn.addEventListener('click', () => {
       const path = btn.dataset.route;
       history.pushState({}, '', path);
-      router(routes);
+      initRouter(routes);
     });
   });
 
