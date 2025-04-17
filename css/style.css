@@ -29,7 +29,8 @@ nav {
   margin-top: 1rem;
 }
 
-nav button {
+nav a {
+  text-decoration: none;
   margin: 0.25rem;
   padding: 0.5rem 1rem;
   background-color: #ffffff;
@@ -41,7 +42,7 @@ nav button {
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-nav button:hover {
+nav a:hover {
   background-color: #4caf50;
   color: white;
   transform: scale(1.05);
