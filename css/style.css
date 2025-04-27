@@ -1,25 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 /* Mobile-first styling */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'shantell', 'georgia', 'serif';
   margin: 0;
   padding: 0;
   background: #fefefe;
-  color: #222;
+  /* color: #2D2A32; */
+  color: #4F345A;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background: #4caf50;
-  color: white;
+  /* font-family: 'shantell', 'georgia', 'serif'; */
+  font-family: 'caveat', 'georgia', 'serif';
+  background: #ACC196;
+  color: #4F345A;
+  /* color: #2D2A32; */
   padding: 1rem;
   text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
 }
 
 header h1 {
-  margin: 0;
+  /* margin: 0; */
+  font-family: 'caveat', 'georgia', 'serif';
   font-size: 1.5rem;
+  justify-content: center;
 }
 
 nav {
@@ -35,7 +44,7 @@ nav a {
   padding: 0.5rem 1rem;
   background-color: #ffffff;
   color: #4caf50;
-  border: 2px solid #4caf50;
+  border: 4px solid #4caf50;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
@@ -46,6 +55,16 @@ nav a:hover {
   background-color: #4caf50;
   color: white;
   transform: scale(1.05);
+}
+
+.hero {
+  position: relative;
+}
+.hero .logo {
+  position: absolute;
+  left: calc(50% - 60px);
+  bottom: -10px;
+  background-color: white;
 }
 
 main#app {
@@ -69,23 +88,30 @@ main#app {
 }
 
 footer {
-  background: #222;
-  color: white;
+  background: #ACC196;
+  color: #4F345A;
+  /* color: #2D2A32; */
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 /* Larger screens (laptops and desktops) */
 @media (min-width: 768px) {
   header {
-    text-align: left;
+    /* text-align: left; */
+    text-align: center;
     padding: 1rem 2rem;
   }
 
   nav {
-    justify-content: flex-end;
-    margin-top: 0;
+    justify-content: center;
+    /* margin-top: 0; */
+  }
+
+  nav a {
+    justify-content: center;
   }
 
   main#app {

@@ -4,17 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Complete Recipe Meal Prep Planner</title>
+  <!-- <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>     -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/getdates.js"></script>
 </head>
 <body>
   <header>
-    <h1>Meal Prep Planner</h1>
+    <h1>🍽️    Meal Prep Planner    🍽️</h1>
     <nav>
         <a href="#" id="home-btn">Home</a>
         <a href="#/search" id="search-btn">Search</a>
         <a href="#/favorites" id="favorites-btn">Favorites</a>
-        <a href="#/login" id="signup-btn">Sign Up / Login</a>
+        <a href="#/signup" id="signup-btn">Sign Up</a>
+        <a href="#/login" id="signup-btn">Login</a>
       </nav>
   </header>
 
@@ -25,6 +33,13 @@
       <input id="login-password" type="password" placeholder="Password" />
       <button id="login-btn">Log In</button>
     </section>
+
+    <!-- <div class="hero">
+      <img
+        src="/images/banner-sm.jpg"
+        srcset="images/banner-sm.jpg 500w, images/banner.jpg"
+        alt="image of a high mountain lake"
+      /> -->
 
     <section id="signup" style="display: none;">
       <h2>Sign Up</h2>
@@ -53,6 +68,7 @@
 
   <footer>
     <p>&copy; 2025 The Complete Recipe Meal Prep Planner | Not an actual site | WDD330 - Final Project - Single Page Application.</p>
+    <p><span id="lastModified"></span></p>
   </footer>
 
 </body>
