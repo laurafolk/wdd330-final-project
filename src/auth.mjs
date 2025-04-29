@@ -3,7 +3,7 @@ export function renderLogin() {
     document.getElementById('app').innerHTML = `
       <h2>Login</h2>
       <form id="auth-form">
-        <input type="text" id="username" placeholder="Enter your name" required />
+        <input type="text" id="username" placeholder="Enter a valid user name" required />
         <button type="submit">Continue</button>
       </form>
     `;
@@ -23,7 +23,7 @@ export function renderLogin() {
     document.getElementById('app').innerHTML = `
       <h2>Sign Up</h2>
       <form id="auth-form">
-        <input type="text" id="username" placeholder="Enter your name" required />
+        <input type="text" id="username" placeholder="Enter a valid user name" required />
         <button type="submit">Continue</button>
       </form>
     `;
