@@ -1,12 +1,14 @@
 // src/router.mjs
 import { renderHome } from './home.mjs';
 import { renderSearch } from './search.mjs';
+import { renderSignUp } from './auth.mjs';
 import { renderLogin } from './auth.mjs';
 import { renderFavorites } from "./utils.js";
 
 const routes = {
   "/": renderHome,
   "/search": renderSearch,
+  "/signup": renderSignUp,
   "/login": renderLogin,
   "/favorites": renderFavorites,
 };

@@ -9,20 +9,22 @@
     </style>     -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oregano&family=Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="src/main.js"></script>
   <script type="module" src="src/getdates.js"></script>
 </head>
 <body>
   <header>
-    <h1>🍽️    Meal Prep Planner    🍽️</h1>
+    <h1>🍽️   The Complete Meal Prep Planner   🍽️</h1>
+    
     <nav>
         <a href="#" id="home-btn">Home</a>
         <a href="#/search" id="search-btn">Search</a>
         <a href="#/favorites" id="favorites-btn">Favorites</a>
         <a href="#/signup" id="signup-btn">Sign Up</a>
-        <a href="#/login" id="signup-btn">Login</a>
+        <a href="#/login" id="login-btn">Login</a>
+        <a href="#/logout" id="logout-btn">Log Out</a>
       </nav>
   </header>
 
@@ -43,7 +45,7 @@
 
     <section id="signup" style="display: none;">
       <h2>Sign Up</h2>
-      <input id="signup-username" type="text" placeholder="Username" />
+      <input id="signup-username" type="text" placeholder="Enter a Valid Username" />
       <input id="signup-password" type="password" placeholder="Password" />
       <button id="signup-btn">Sign Up</button>
     </section>
@@ -64,6 +66,13 @@
       <h2>Your Profile</h2>
       <p id="profile-username"></p>
     </section>
+
+    <section id="auth">
+      <h2>Log Out</h2>
+      <input id="logout" type="text" placeholder="Log Out" />
+      <button id="logout-btn">Log Out</button>
+    </section>
+
   </main>
 
   <footer>
